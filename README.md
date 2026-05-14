@@ -2,81 +2,37 @@
 
 *"Know your stakeholder better than they know themselves."*
 
-A Claude Code tool that autonomously hunts across **Slack, Gmail, Zoom, and Google Drive** to build a deep psychological and professional profile of any stakeholder — then rewrites your documents in a version perfectly tailored for them.
+A tool that autonomously hunts across **Slack, Zoom, and Google Drive** to build a deep psychological and professional profile of any stakeholder — then rewrites your message in a version perfectly tailored for them.
 
 ## Prerequisites
 
 - Claude Code installed (`npm install -g @anthropic-ai/claude-code`)
-- Connected MCP servers: Slack, Gmail, Google Drive, Zoom
-- A Claude Max or Pro subscription
+- Connected MCP servers: Slack, Google Drive, Zoom
+- Intuit enterprise OAuth (Claude Code)
 
-## Setup (30 seconds)
+## Setup
 
 ```bash
-# Clone this project
-git clone <repo> stakeholder-mindreader
+git clone https://github.com/omerocak-svg/stakeholder-mindreader
 cd stakeholder-mindreader
-
-# Launch Claude Code
-claude
+bash start.sh
 ```
 
-That's it. The MCP connections and slash commands are pre-configured.
+Open http://localhost:5173
 
-## Usage
+## How It Works
 
-### Step 1: Build the profile
-
-```
-/mindreader "Sarabjeet Chugh"
-```
-
-Watch Claude Code **think out loud** as it:
-
-- 🔍 Searches Slack for Sarabjeet's messages and threads
-- 📧 Pulls Gmail threads he's written or responded to
-- 🎙️ Scans Zoom transcripts from meetings he attended
-- 📁 Finds Google Drive docs he authored or commented on
-
-Then synthesizes everything into a **full stakeholder profile**.
-
-### Step 2: Tailor any document
-
-```
-/tailor-for "Sarabjeet Chugh" my-prd.md
-```
-
-Claude reads your PRD, loads Sarabjeet's profile, and returns:
-
-1. **Coaching notes** — what you did well, what changed and why, predicted reaction
-2. **Rewritten document** — same facts, completely restructured for Sarabjeet
+1. **Type a stakeholder's name** — Claude searches Slack, Zoom, Drive for real data
+2. **Get their profile** — communication style, what to lean into, what to avoid, real quotes
+3. **Paste your draft** — Claude rewrites it perfectly tailored for that person
 
 ## Output Structure
 
 ```
 .claude/
   profiles/
-    Sarabjeet Chugh.md     ← saved stakeholder profile
-  commands/
-    mindreader.md          ← /mindreader command
-    tailor-for.md          ← /tailor-for command
-  settings.json            ← MCP server config
-CLAUDE.md                  ← project context
+    [Name].md     ← saved stakeholder profile
 ```
-
-## What's in a Profile
-
-| Section | What it tells you |
-|:-------:|:-----------------:|
-| 🎯 One-Liner | Their essence as a stakeholder in one sentence |
-| 🔑 Core Values | What they actually care about, with evidence |
-| 🗣️ Communication Style | Format, tone, length preferences |
-| 🔥 Hot Buttons | Topics that make them lean in |
-| ❄️ Cold Buttons | Topics that make them disengage |
-| ✅ Decision Triggers | What conditions unlock a "yes" |
-| 🚩 Silent Red Flags | What they hate but won't say |
-| 📝 How to Write for Them | Specific DOs and DON'Ts |
-| 🎭 Pre-Meeting Briefing | What to expect in your next meeting |
 
 ## Privacy Note
 
