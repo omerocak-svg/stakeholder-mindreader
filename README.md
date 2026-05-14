@@ -34,8 +34,10 @@ No fake data. Everything comes from real Slack/Zoom/Drive evidence via live MCP 
 ### Prerequisites
 - WSL (Windows Subsystem for Linux)
 - Node.js v18+ via NVM in WSL
-- Claude Code CLI installed and logged in (`claude login`)
-- MCP connectors configured: Slack, Zoom, Google Drive
+- Claude Code CLI installed and logged in with Intuit enterprise OAuth
+- MCP connectors configured for Slack, Zoom, and Google Drive
+
+> **Note:** This app requires Intuit's internal Claude Code setup with enterprise OAuth and MCP connectors. It is not plug-and-play for external users — it runs on your own Intuit-connected machine.
 
 ### Start
 
