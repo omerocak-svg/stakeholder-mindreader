@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "slack": {
+      "comment": "Slack MCP — configure via Claude Code MCP settings"
+    },
+    "gmail": {
+      "comment": "Gmail MCP — configure via Claude Code MCP settings"
+    },
+    "zoom": {
+      "comment": "Zoom MCP — configure via Claude Code MCP settings"
+    },
+    "gdrive": {
+      "comment": "Google Drive MCP — configure via Claude Code MCP settings"
+    }
+  },
+  "permissions": {
+    "allow": [
+      "mcp__slack__*",
+      "mcp__gmail__*",
+      "mcp__zoom__*",
+      "mcp__gdrive__*",
+      "Read",
+      "Write",
+      "Bash"
+    ]
+  }
+}
